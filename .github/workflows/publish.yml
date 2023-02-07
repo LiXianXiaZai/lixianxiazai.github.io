@@ -12,10 +12,6 @@ jobs:
 
     steps:
     
-    - name: Checkout
-      uses: actions/checkout@v3
-      with:
-        path: main
     - name: Download AriaNg Release
       uses: robinraju/release-downloader@v1.7
       id: download
@@ -38,15 +34,13 @@ jobs:
       
     - name: 'unzip'
       run: |
-        unzip -o "$GITHUB_WORKSPACE/downloads/AriaNg-${{steps.download.outputs.tag_name}}.zip" -d "$GITHUB_WORKSPACE/main/"
-        ls "$GITHUB_WORKSPACE/main/"
-        cd "$GITHUB_WORKSPACE/main/"
-        pwd
+        mkdir -p "$GITHUB_WORKSPACE/files/"
+        unzip -o "$GITHUB_WORKSPACE/downloads/AriaNg-${{steps.download.outputs.tag_name}}.zip" -d "$GITHUB_WORKSPACE/files/"
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./main
+        publish_dir: ./files
         publish_branch: gh-pages
         commit_message: 'AriaNg ${{steps.download.outputs.tag_name}} 更新'
