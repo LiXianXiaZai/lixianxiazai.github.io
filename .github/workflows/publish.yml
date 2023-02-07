@@ -12,7 +12,7 @@ jobs:
 
     steps:
     
-    - name: Download AriaNg Release
+    - name: 下载 AriaNg 最新发布版
       uses: robinraju/release-downloader@v1.7
       id: download
       with:
@@ -32,12 +32,13 @@ jobs:
         # 例如: out-file-path: "my-downloads" => 它将创建目录 $GITHUB_WORKSPACE/my-downloads
         out-file-path: "downloads"
       
-    - name: 'unzip'
+    - name: 解压 zip 文件
       run: |
         mkdir -p "files/"
         unzip -o "./downloads/AriaNg-${{steps.download.outputs.tag_name}}.zip" -d "./files/"
+        echo "lixianxiazai.tinggs.com" > "./files/CNAME"  # 绑定自定义域名
 
-    - name: Deploy
+    - name: 部署到 GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
