@@ -36,7 +36,7 @@ jobs:
       run: |
         mkdir -p "files/"
         unzip -o "./downloads/AriaNg-${{steps.download.outputs.tag_name}}.zip" -d "./files/"
-        echo "lixianxiazai.tinggs.net" > "./files/CNAME"  # 绑定自定义域名
+        echo "lixianxiazai.tinggs.com" > "./files/CNAME"  # 绑定自定义域名
 
     - name: 部署到 GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
