@@ -34,8 +34,8 @@ jobs:
       
     - name: 'unzip'
       run: |
-        mkdir -p "files/"
-        unzip -o "./downloads/AriaNg-${{steps.download.outputs.tag_name}}.zip" -d "./files/"
+        mkdir -p "$GITHUB_WORKSPACE/files/"
+        unzip -o "$GITHUB_WORKSPACE/downloads/AriaNg-${{steps.download.outputs.tag_name}}.zip" -d "$GITHUB_WORKSPACE/files/"
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
