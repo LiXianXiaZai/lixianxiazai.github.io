@@ -36,7 +36,14 @@ jobs:
       run: |
         mkdir -p "gh-pages/"
         unzip -o "./downloads/AriaNg-${{steps.download.outputs.tag_name}}.zip" -d "./gh-pages/"
-        echo "${{ vars.CNAME }}" > "./gh-pages/CNAME"  # 绑定自定义域名
+        
+    - name: 绑定自定义域名
+      run: |
+        echo "${{ vars.CNAME }}" > "./gh-pages/CNAME"
+        
+    - name: 写 README.md
+      run: |
+        echo "${{ vars.README }}" > "./gh-pages/README.md"
 
     - name: 部署到 GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
