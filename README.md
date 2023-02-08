@@ -1,6 +1,5 @@
 # AriaNg
-[![License](https://img.shields.io/github/license/mayswind/AriaNg.svg?style=flat)](https://github.com/mayswind/AriaNg/blob/master/LICENSE)
-[![Lastest Build](https://img.shields.io/circleci/project/github/mayswind/AriaNg.svg?style=flat)](https://circleci.com/gh/mayswind/AriaNg/tree/master)
+[![License](https://img.shields.io/github/license/LiXianXiaZai/lixianxiazai.github.io.svg?style=flat)](https://github.com/LiXianXiaZai/lixianxiazai.github.io/blob/master/LICENSE)
 [![Lastest Release](https://img.shields.io/github/release/mayswind/AriaNg.svg?style=flat)](https://github.com/mayswind/AriaNg/releases)
 
 ## Introduction
