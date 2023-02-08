@@ -11,6 +11,11 @@ Name: CNAME
 Value: 域名
 ```
 
+```
+Name: README
+Value: README.md 内容
+```
+
 ## 使用
 
 Actions -> Publish -> Run workflow
