@@ -32,16 +32,16 @@ jobs:
         # 例如: out-file-path: "my-downloads" => 它将创建目录 $GITHUB_WORKSPACE/my-downloads
         out-file-path: "downloads"
       
-    - name: 解压 zip 文件
+    - name: 解压 AriaNg-*.zip 文件
       run: |
-        mkdir -p "files/"
-        unzip -o "./downloads/AriaNg-${{steps.download.outputs.tag_name}}.zip" -d "./files/"
+        mkdir -p "unzip_files/"
+        unzip -o "./downloads/AriaNg-${{steps.download.outputs.tag_name}}.zip" -d "./unzip_files/"
         echo "${{ vars.CNAME }}" > "./files/CNAME"  # 绑定自定义域名
 
     - name: 部署到 GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./files
+        publish_dir: ./unzip_files
         publish_branch: gh-pages
         commit_message: 'AriaNg v${{steps.download.outputs.tag_name}} 更新'
