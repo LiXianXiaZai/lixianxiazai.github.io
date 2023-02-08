@@ -1,6 +1,6 @@
 # AriaNg 网站
 
-可以使用 Github 的 Actions 自动更新 AriaNg 网站
+[AriaNg](https://github.com/mayswind/AriaNg/releases) 发布新版本后，可以使用 Github 的 Actions 自动更新 AriaNg 网站
 
 ## 为存储库创建配置变量
 
