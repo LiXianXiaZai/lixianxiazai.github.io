@@ -12,7 +12,7 @@ jobs:
 
     steps:
     
-    - name: 下载 AriaNg 最新发布版
+    - name: 下载最新正式版 AriaNg
       uses: robinraju/release-downloader@v1.7
       id: download
       with:
