@@ -3,7 +3,7 @@
 [![Lastest Release](https://img.shields.io/github/release/mayswind/AriaNg.svg?style=flat)](https://github.com/mayswind/AriaNg/releases)
 
 ## 介绍
-此分支内容又 Actions 自动创建，将此分支设为 GitHub Pages ，访问使用 AriaNg 。
+此分支内容由 Actions 自动创建，将此分支设为 GitHub Pages 网站，即可使用 AriaNg 。
 
 ## 截图
 #### 电脑端
